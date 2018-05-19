@@ -39,4 +39,14 @@ object ProblemOne {
       null
     }
   }
+
+  def lastV4[A](list: List[A]): Option[A] = {
+    if (list.length == 1) {
+      Some(list(0))
+    } else if (list.nonEmpty) {
+      Some(list(list.length - 1))
+    } else {
+      None
+    }
+  }
 }
