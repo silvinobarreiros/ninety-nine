@@ -55,4 +55,6 @@ object ProblemOne {
     case head :: Nil => Some(head)
     case head :: tail => lastV5(list.tail)
   }
+
+  def lastV6[A](list: List[A]): A = list.last
 }
