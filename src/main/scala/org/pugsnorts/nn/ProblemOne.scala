@@ -29,4 +29,14 @@ object ProblemOne {
       Int.MinValue
     }
   }
+
+  def lastV3[A >: Null](list: List[A]): A = {
+    if (list.length == 1) {
+      list(0)
+    } else if (list.nonEmpty) {
+      list(list.length - 1)
+    } else {
+      null
+    }
+  }
 }
