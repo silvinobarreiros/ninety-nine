@@ -5,7 +5,7 @@ import org.scalatest._
 class ProblemFifteenSpec extends FlatSpec with Matchers {
   
   trait Fixture {
-    def duplicateN[A]: (Int, List[A]) => List[A] = ProblemFifteen.duplicateNV2[A]
+    def duplicateN[A]: (Int, List[A]) => List[A] = ProblemFifteen.duplicateNV3[A]
   }
 
   "duplicateN" should "return an empty list when there are no elements" in new Fixture { fix =>
