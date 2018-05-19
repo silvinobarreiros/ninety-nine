@@ -49,4 +49,10 @@ object ProblemOne {
       None
     }
   }
+
+  def lastV5[A](list: List[A]): Option[A] = list match {
+    case Nil => None
+    case head :: Nil => Some(head)
+    case head :: tail => lastV5(list.tail)
+  }
 }

@@ -5,7 +5,7 @@ import org.scalatest._
 class ProblemOneSpec extends FlatSpec with Matchers {
   
   trait Fixture {
-    def last[A]: List[A] => Option[A] = ProblemOne.lastV4[A]
+    def last[A]: List[A] => Option[A] = ProblemOne.lastV5[A]
   }
 
   "last" should "give me back None when the list is empty" in new Fixture { fix =>
