@@ -11,14 +11,22 @@ object ProblemOne {
   def lastV1(list: List[Int]): Int = {
     var last = Int.MaxValue
 
-    if (list.isEmpty) {
-      return last
-    } else if (list.length == 1) {
+    if (list.length == 1) {
       last = list(0)
-    } else {
+    } else if (list.nonEmpty) {
       last = list(list.length - 1)
     }
 
     last
+  }
+
+  def lastV2(list: List[Int]): Int = {
+    if (list.length == 1) {
+      list(0)
+    } else if (list.nonEmpty) {
+      list(list.length - 1)
+    } else {
+      Int.MinValue
+    }
   }
 }

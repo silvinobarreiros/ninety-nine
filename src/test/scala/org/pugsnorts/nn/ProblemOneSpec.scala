@@ -5,7 +5,7 @@ import org.scalatest._
 class ProblemOneSpec extends FlatSpec with Matchers {
   
   trait Fixture {
-    val last: List[Int] => Int = ProblemOne.lastV1
+    val last: List[Int] => Int = ProblemOne.lastV2
   }
 
   "last" should "give me back null when the list is empty" in new Fixture { fix =>
