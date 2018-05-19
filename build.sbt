@@ -10,3 +10,7 @@ lazy val root = (project in file(".")).
     name := "ninety-nine",
     libraryDependencies += scalaTest % Test
   )
+
+parallelExecution in Test := false
+
+mainClass in (Compile, run) := Some("com.stash.Sandbox")
