@@ -1,4 +1,4 @@
-package org.pugsnorts.nn
+package com.stash.nn
 
 /**
  * Find the last element of a list.
