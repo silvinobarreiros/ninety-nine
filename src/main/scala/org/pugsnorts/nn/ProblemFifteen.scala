@@ -60,4 +60,10 @@ object ProblemFifteen {
       acc ++ List.fill(n)(next)
     }
   }
+
+  def duplicateNV5[A](n: Int, list: List[A]): List[A] = {
+    list.flatMap { item =>
+      List.fill(n)(item)
+    }
+  }
 }
