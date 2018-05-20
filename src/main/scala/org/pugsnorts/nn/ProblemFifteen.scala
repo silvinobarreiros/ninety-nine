@@ -27,7 +27,7 @@ object ProblemFifteen {
   def duplicateNV2[A](n: Int, list: List[A]): List[A] = {
     import scala.collection.mutable.ListBuffer
     
-    def dupicateHalp(a: A): List[A] = {
+    def halp(a: A): List[A] = {
       List.fill(n)(a)
     }
 
@@ -35,7 +35,7 @@ object ProblemFifteen {
     var i = 0
 
     for (i <- 0 until list.length) {
-      dupicateHalp(list(i)).foreach(j => buffer += j)
+      halp(list(i)).foreach(j => buffer += j)
     }
 
     buffer.toList
@@ -52,5 +52,12 @@ object ProblemFifteen {
     }
 
     buffer.toList
+  }
+
+  def duplicateNV4[A](n: Int, list: List[A]): List[A] = {
+    
+    list.foldLeft(List.empty[A]) { (acc, next) =>
+      acc ++ List.fill(n)(next)
+    }
   }
 }
