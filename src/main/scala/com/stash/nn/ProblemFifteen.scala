@@ -35,7 +35,11 @@ object ProblemFifteen {
     var i = 0
 
     for (i <- 0 until list.length) {
-      halp(list(i)).foreach(j => buffer += j)
+      val repeatedList = halp(list(i))
+      
+      repeatedList.foreach {
+        j => buffer += j
+      }
     }
 
     buffer.toList
@@ -67,9 +71,11 @@ object ProblemFifteen {
     }
   }
 
-  def duplicateNV6[A](n: Int, list: List[A]): List[A] = {
-    val filler = List.fill[A](n)_
+  // def duplicateNV6[A](n: Int, list: List[A]): List[A] = {
+  //   val filler = List.fill[A](n)_
 
-    list.flatMap(filler(_))
-  }
+  //   list.flatMap(filler(_))
+  // }
+
+  def duplicateNV6[A](n: Int, list: List[A]): List[A] = list.flatMap(List.fill[A](n)(_))
 }
