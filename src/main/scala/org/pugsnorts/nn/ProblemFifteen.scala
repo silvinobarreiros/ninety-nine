@@ -66,4 +66,10 @@ object ProblemFifteen {
       List.fill(n)(item)
     }
   }
+
+  def duplicateNV6[A](n: Int, list: List[A]): List[A] = {
+    val filler = List.fill[A](n)_
+
+    list.flatMap(filler(_))
+  }
 }
